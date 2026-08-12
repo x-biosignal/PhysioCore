@@ -1,5 +1,12 @@
 # Changelog
 
+## PhysioCore 0.2.1
+
+- Maintenance release. Refreshes the published package binary so
+  downstream packages reliably resolve the exported provenance API
+  ([`appendProvenance()`](https://x-biosignal.github.io/PhysioCore/reference/appendProvenance.md)
+  and companions). No user-facing API changes.
+
 ## PhysioCore 0.2.0
 
 - Added offline structural parity checks for `AnalysisResult` estimate,

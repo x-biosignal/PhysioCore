@@ -395,7 +395,7 @@ sessionInfo()
 #> [1] stats     graphics  grDevices utils     datasets  methods   base     
 #> 
 #> other attached packages:
-#> [1] PhysioCore_0.2.0
+#> [1] PhysioCore_0.2.1
 #> 
 #> loaded via a namespace (and not attached):
 #>  [1] Matrix_1.7-5                jsonlite_2.0.0             
