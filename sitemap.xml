@@ -23,6 +23,9 @@
 <url><loc>https://x-biosignal.github.io/PhysioCore/reference/NormativeReference.html</loc></url>
 <url><loc>https://x-biosignal.github.io/PhysioCore/reference/PhysioBiomarker-class.html</loc></url>
 <url><loc>https://x-biosignal.github.io/PhysioCore/reference/PhysioBiomarker.html</loc></url>
+<url><loc>https://x-biosignal.github.io/PhysioCore/reference/PhysioCohort-class.html</loc></url>
+<url><loc>https://x-biosignal.github.io/PhysioCore/reference/PhysioCohort-methods.html</loc></url>
+<url><loc>https://x-biosignal.github.io/PhysioCore/reference/PhysioCohort.html</loc></url>
 <url><loc>https://x-biosignal.github.io/PhysioCore/reference/PhysioEvents-class.html</loc></url>
 <url><loc>https://x-biosignal.github.io/PhysioCore/reference/PhysioEvents.html</loc></url>
 <url><loc>https://x-biosignal.github.io/PhysioCore/reference/PhysioExperiment-class.html</loc></url>
@@ -33,6 +36,7 @@
 <url><loc>https://x-biosignal.github.io/PhysioCore/reference/addEvents.html</loc></url>
 <url><loc>https://x-biosignal.github.io/PhysioCore/reference/addProvenance.html</loc></url>
 <url><loc>https://x-biosignal.github.io/PhysioCore/reference/addSession.html</loc></url>
+<url><loc>https://x-biosignal.github.io/PhysioCore/reference/addSubject.html</loc></url>
 <url><loc>https://x-biosignal.github.io/PhysioCore/reference/alignStreams.html</loc></url>
 <url><loc>https://x-biosignal.github.io/PhysioCore/reference/appendProvenance.html</loc></url>
 <url><loc>https://x-biosignal.github.io/PhysioCore/reference/applyMontage.html</loc></url>
@@ -50,6 +54,8 @@
 <url><loc>https://x-biosignal.github.io/PhysioCore/reference/channelNames.html</loc></url>
 <url><loc>https://x-biosignal.github.io/PhysioCore/reference/checkNA.html</loc></url>
 <url><loc>https://x-biosignal.github.io/PhysioCore/reference/cohensD.html</loc></url>
+<url><loc>https://x-biosignal.github.io/PhysioCore/reference/cohortData.html</loc></url>
+<url><loc>https://x-biosignal.github.io/PhysioCore/reference/cohortDesign.html</loc></url>
 <url><loc>https://x-biosignal.github.io/PhysioCore/reference/commonClock.html</loc></url>
 <url><loc>https://x-biosignal.github.io/PhysioCore/reference/defaultAssay.html</loc></url>
 <url><loc>https://x-biosignal.github.io/PhysioCore/reference/deprecate_physio.html</loc></url>
@@ -128,7 +134,11 @@
 <url><loc>https://x-biosignal.github.io/PhysioCore/reference/streamTimeIndex.html</loc></url>
 <url><loc>https://x-biosignal.github.io/PhysioCore/reference/streams.html</loc></url>
 <url><loc>https://x-biosignal.github.io/PhysioCore/reference/sub-PhysioExperiment-ANY-ANY-ANY-method.html</loc></url>
+<url><loc>https://x-biosignal.github.io/PhysioCore/reference/subject.html</loc></url>
 <url><loc>https://x-biosignal.github.io/PhysioCore/reference/subjectData.html</loc></url>
+<url><loc>https://x-biosignal.github.io/PhysioCore/reference/subjectIds.html</loc></url>
+<url><loc>https://x-biosignal.github.io/PhysioCore/reference/subjects.html</loc></url>
+<url><loc>https://x-biosignal.github.io/PhysioCore/reference/subsetCohort.html</loc></url>
 <url><loc>https://x-biosignal.github.io/PhysioCore/reference/summary-PhysioExperiment-method.html</loc></url>
 <url><loc>https://x-biosignal.github.io/PhysioCore/reference/theme_physio.html</loc></url>
 <url><loc>https://x-biosignal.github.io/PhysioCore/reference/timeIndex.html</loc></url>

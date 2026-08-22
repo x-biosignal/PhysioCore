@@ -25,6 +25,9 @@ provenance(x)
 
 # S4 method for class 'PhysioLongitudinal'
 provenance(x)
+
+# S4 method for class 'PhysioCohort'
+provenance(x)
 ```
 
 ## Arguments
@@ -72,9 +75,9 @@ pe <- PhysioExperiment(
 pe <- logStep(pe, "filterSignals", params = list(low = 1, high = 40))
 provenance(pe)
 #>            step      activity                                   entity used
-#> 1 filterSignals filterSignals pe:filterSignals@2026-08-12T14:20:04.661 <NA>
+#> 1 filterSignals filterSignals pe:filterSignals@2026-08-22T14:06:39.888 <NA>
 #>   generated                agent   user package version       startedAtTime
-#> 1      <NA> runner@runnervmvrwv9 runner    <NA>    <NA> 2026-08-12 14:20:04
+#> 1      <NA> runner@runnervm76f27 runner    <NA>    <NA> 2026-08-22 14:06:39
 #>           endedAtTime           timestamp         params         params_json
-#> 1 2026-08-12 14:20:04 2026-08-12 14:20:04 low=1, high=40 {"low":1,"high":40}
+#> 1 2026-08-22 14:06:39 2026-08-22 14:06:39 low=1, high=40 {"low":1,"high":40}
 ```

@@ -1,5 +1,36 @@
 # Changelog
 
+## PhysioCore 0.3.0
+
+- New `PhysioCohort` class: the multi-subject / study container above
+  `PhysioLongitudinal`. It holds many participants (each a
+  `PhysioLongitudinal` timeline; bare
+  `PhysioExperiment`/`MultiRatePhysioExperiment` subjects are
+  auto-wrapped into a single-session timeline) alongside a subject-level
+  `colData` table (id, group/arm, diagnosis, …). This is the cohort /
+  RCT-arm spine a rehabilitation study needs — previously the ecosystem
+  could represent a single subject’s sessions but had no multi-subject
+  container.
+  - Constructor
+    [`PhysioCohort()`](https://x-biosignal.github.io/PhysioCore/reference/PhysioCohort.md);
+    accessors
+    [`subjects()`](https://x-biosignal.github.io/PhysioCore/reference/subjects.md),
+    [`subject()`](https://x-biosignal.github.io/PhysioCore/reference/subject.md),
+    [`cohortData()`](https://x-biosignal.github.io/PhysioCore/reference/cohortData.md),
+    [`subjectIds()`](https://x-biosignal.github.io/PhysioCore/reference/subjectIds.md),
+    [`nSubjects()`](https://x-biosignal.github.io/PhysioCore/reference/subjectIds.md),
+    [`groups()`](https://x-biosignal.github.io/PhysioCore/reference/subjectIds.md);
+    [`addSubject()`](https://x-biosignal.github.io/PhysioCore/reference/addSubject.md),
+    [`subsetCohort()`](https://x-biosignal.github.io/PhysioCore/reference/subsetCohort.md)
+    (by group or predicate), `[`, `length`, `show`, and an aggregated
+    [`provenance()`](https://x-biosignal.github.io/PhysioCore/reference/provenance.md)
+    method.
+  - [`cohortDesign()`](https://x-biosignal.github.io/PhysioCore/reference/cohortDesign.md)
+    flattens the whole cohort into a tidy subjects×sessions table
+    (subject_id + colData + session_id/visit_label/days_from_baseline) —
+    the iteration unit for pipelines, longitudinal models and trial
+    analyses.
+
 ## PhysioCore 0.2.1
 
 - Maintenance release. Refreshes the published package binary so

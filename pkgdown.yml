@@ -4,7 +4,7 @@ pkgdown_sha: ~
 articles:
   event-handling: event-handling.html
   getting-started: getting-started.html
-last_built: 2026-08-12T14:19Z
+last_built: 2026-08-22T14:06Z
 urls:
   reference: https://x-biosignal.github.io/PhysioCore/reference
   article: https://x-biosignal.github.io/PhysioCore/articles

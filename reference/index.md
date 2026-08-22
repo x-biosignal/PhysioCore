@@ -38,6 +38,14 @@
   : PhysioBiomarker: a single computed biomarker with metadata
 - [`PhysioBiomarker()`](https://x-biosignal.github.io/PhysioCore/reference/PhysioBiomarker.md)
   : Construct a PhysioBiomarker
+- [`PhysioCohort-class`](https://x-biosignal.github.io/PhysioCore/reference/PhysioCohort-class.md)
+  : Multi-subject cohort / study container
+- [`length(`*`<PhysioCohort>`*`)`](https://x-biosignal.github.io/PhysioCore/reference/PhysioCohort-methods.md)
+  [`` `[`( ``*`<PhysioCohort>`*`,`*`<ANY>`*`,`*`<ANY>`*`,`*`<ANY>`*`)`](https://x-biosignal.github.io/PhysioCore/reference/PhysioCohort-methods.md)
+  [`show(`*`<PhysioCohort>`*`)`](https://x-biosignal.github.io/PhysioCore/reference/PhysioCohort-methods.md)
+  : Size, subsetting and display for PhysioCohort
+- [`PhysioCohort()`](https://x-biosignal.github.io/PhysioCore/reference/PhysioCohort.md)
+  : Construct a PhysioCohort
 - [`PhysioEvents-class`](https://x-biosignal.github.io/PhysioCore/reference/PhysioEvents-class.md)
   : Event management for PhysioExperiment
 - [`PhysioEvents()`](https://x-biosignal.github.io/PhysioCore/reference/PhysioEvents.md)
@@ -60,6 +68,8 @@
   : Append a provenance step, capturing an optional seed
 - [`addSession()`](https://x-biosignal.github.io/PhysioCore/reference/addSession.md)
   : Add a session to a PhysioLongitudinal
+- [`addSubject()`](https://x-biosignal.github.io/PhysioCore/reference/addSubject.md)
+  : Add a subject to a PhysioCohort
 - [`alignStreams()`](https://x-biosignal.github.io/PhysioCore/reference/alignStreams.md)
   : Align all streams to the reference rate
 - [`appendProvenance()`](https://x-biosignal.github.io/PhysioCore/reference/appendProvenance.md)
@@ -94,6 +104,11 @@
   : Check for NA values in assay data
 - [`cohensD()`](https://x-biosignal.github.io/PhysioCore/reference/cohensD.md)
   : Cohen's d Effect Size
+- [`cohortData()`](https://x-biosignal.github.io/PhysioCore/reference/cohortData.md)
+  [`` `cohortData<-`() ``](https://x-biosignal.github.io/PhysioCore/reference/cohortData.md)
+  : Subject-level metadata table of a PhysioCohort
+- [`cohortDesign()`](https://x-biosignal.github.io/PhysioCore/reference/cohortDesign.md)
+  : Long design table of a cohort (subjects x sessions)
 - [`commonClock()`](https://x-biosignal.github.io/PhysioCore/reference/commonClock.md)
   : The master clock
 - [`defaultAssay()`](https://x-biosignal.github.io/PhysioCore/reference/defaultAssay.md)
@@ -254,9 +269,20 @@
   : Access the streams of a MultiRatePhysioExperiment
 - [`` `[`( ``*`<PhysioExperiment>`*`,`*`<ANY>`*`,`*`<ANY>`*`,`*`<ANY>`*`)`](https://x-biosignal.github.io/PhysioCore/reference/sub-PhysioExperiment-ANY-ANY-ANY-method.md)
   : Subset PhysioExperiment by time indices
+- [`subject()`](https://x-biosignal.github.io/PhysioCore/reference/subject.md)
+  : Retrieve a single subject's longitudinal record by id
 - [`subjectData()`](https://x-biosignal.github.io/PhysioCore/reference/subjectData.md)
   [`` `subjectData<-`() ``](https://x-biosignal.github.io/PhysioCore/reference/subjectData.md)
   : Subject-level metadata
+- [`subjectIds()`](https://x-biosignal.github.io/PhysioCore/reference/subjectIds.md)
+  [`nSubjects()`](https://x-biosignal.github.io/PhysioCore/reference/subjectIds.md)
+  [`groups()`](https://x-biosignal.github.io/PhysioCore/reference/subjectIds.md)
+  : Subject ids, subject count and group labels of a PhysioCohort
+- [`subjects()`](https://x-biosignal.github.io/PhysioCore/reference/subjects.md)
+  [`` `subjects<-`() ``](https://x-biosignal.github.io/PhysioCore/reference/subjects.md)
+  : Subjects of a PhysioCohort
+- [`subsetCohort()`](https://x-biosignal.github.io/PhysioCore/reference/subsetCohort.md)
+  : Subset a PhysioCohort by group (or a predicate on colData)
 - [`summary(`*`<PhysioExperiment>`*`)`](https://x-biosignal.github.io/PhysioCore/reference/summary-PhysioExperiment-method.md)
   : Summary statistics for PhysioExperiment
 - [`theme_physio()`](https://x-biosignal.github.io/PhysioCore/reference/theme_physio.md)

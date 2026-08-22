@@ -7,7 +7,7 @@
 
     <a class="navbar-brand me-2" href="../index.html">PhysioCore</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">0.2.1</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">0.3.0</small>
 
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -55,6 +55,14 @@
       <small>Source: <a href="https://github.com/x-biosignal/PhysioCore/blob/main/NEWS.md" class="external-link"><code>NEWS.md</code></a></small>
     </div>
 
+    <div class="section level2">
+<h2 class="pkg-version" data-toc-text="0.3.0" id="physiocore-030">PhysioCore 0.3.0<a class="anchor" aria-label="anchor" href="#physiocore-030"></a></h2>
+<ul><li>New <code>PhysioCohort</code> class: the multi-subject / study container above <code>PhysioLongitudinal</code>. It holds many participants (each a <code>PhysioLongitudinal</code> timeline; bare <code>PhysioExperiment</code>/<code>MultiRatePhysioExperiment</code> subjects are auto-wrapped into a single-session timeline) alongside a subject-level <code>colData</code> table (id, group/arm, diagnosis, …). This is the cohort / RCT-arm spine a rehabilitation study needs — previously the ecosystem could represent a single subject’s sessions but had no multi-subject container.
+<ul><li>Constructor <code><a href="../reference/PhysioCohort.html">PhysioCohort()</a></code>; accessors <code><a href="../reference/subjects.html">subjects()</a></code>, <code><a href="../reference/subject.html">subject()</a></code>, <code><a href="../reference/cohortData.html">cohortData()</a></code>, <code><a href="../reference/subjectIds.html">subjectIds()</a></code>, <code><a href="../reference/subjectIds.html">nSubjects()</a></code>, <code><a href="../reference/subjectIds.html">groups()</a></code>; <code><a href="../reference/addSubject.html">addSubject()</a></code>, <code><a href="../reference/subsetCohort.html">subsetCohort()</a></code> (by group or predicate), <code>[</code>, <code>length</code>, <code>show</code>, and an aggregated <code><a href="../reference/provenance.html">provenance()</a></code> method.</li>
+<li>
+<code><a href="../reference/cohortDesign.html">cohortDesign()</a></code> flattens the whole cohort into a tidy subjects×sessions table (subject_id + colData + session_id/visit_label/days_from_baseline) — the iteration unit for pipelines, longitudinal models and trial analyses.</li>
+</ul></li>
+</ul></div>
     <div class="section level2">
 <h2 class="pkg-version" data-toc-text="0.2.1" id="physiocore-021">PhysioCore 0.2.1<a class="anchor" aria-label="anchor" href="#physiocore-021"></a></h2>
 <ul><li>Maintenance release. Refreshes the published package binary so downstream packages reliably resolve the exported provenance API (<code><a href="../reference/appendProvenance.html">appendProvenance()</a></code> and companions). No user-facing API changes.</li>
