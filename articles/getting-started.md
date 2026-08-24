@@ -21,6 +21,8 @@ channel metadata via `colData`, and a sampling rate in Hz.
 ``` r
 
 library(PhysioCore)
+#> Warning: replacing previous import 'S4Arrays::makeNindexFromArrayViewport' by
+#> 'DelayedArray::makeNindexFromArrayViewport' when loading 'SummarizedExperiment'
 
 # Simulate 4 seconds of 4-channel EEG data at 250 Hz
 n_time <- 1000
@@ -325,7 +327,7 @@ sessionInfo()
 #> [1] stats     graphics  grDevices utils     datasets  methods   base     
 #> 
 #> other attached packages:
-#> [1] PhysioCore_0.3.0 BiocStyle_2.40.0
+#> [1] PhysioCore_0.4.0 BiocStyle_2.40.0
 #> 
 #> loaded via a namespace (and not attached):
 #>  [1] Matrix_1.7-5                jsonlite_2.0.0             

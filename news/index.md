@@ -1,5 +1,29 @@
 # Changelog
 
+## PhysioCore 0.4.0
+
+Generic statistical methods relocated here as their single source of
+truth (previously in PhysioMoCap), so the whole ecosystem can share them
+and the statistics layer (PhysioAnalysis) can surface them:
+
+- Functional PCA:
+  [`fPCA()`](https://x-biosignal.github.io/PhysioCore/reference/fPCA.md),
+  [`reconstructFPCA()`](https://x-biosignal.github.io/PhysioCore/reference/reconstructFPCA.md),
+  [`registerCurves()`](https://x-biosignal.github.io/PhysioCore/reference/registerCurves.md)
+  (the ggplot2 visualiser `plotFPCA()` stays in PhysioMoCap).
+- Waveform reliability:
+  [`waveformCMC()`](https://x-biosignal.github.io/PhysioCore/reference/waveformCMC.md),
+  [`waveformICC()`](https://x-biosignal.github.io/PhysioCore/reference/waveformICC.md),
+  [`waveformReliability()`](https://x-biosignal.github.io/PhysioCore/reference/waveformReliability.md).
+- Circular statistics:
+  [`circularSummary()`](https://x-biosignal.github.io/PhysioCore/reference/circularSummary.md),
+  [`rayleighTest()`](https://x-biosignal.github.io/PhysioCore/reference/rayleighTest.md),
+  [`watsonWilliamsTest()`](https://x-biosignal.github.io/PhysioCore/reference/watsonWilliamsTest.md),
+  [`circularLinearCorrelation()`](https://x-biosignal.github.io/PhysioCore/reference/circularLinearCorrelation.md).
+
+PhysioMoCap re-exports all of these for back-compatibility, so existing
+`PhysioMoCap::fPCA()` etc. calls are unchanged.
+
 ## PhysioCore 0.3.0
 
 - New `PhysioCohort` class: the multi-subject / study container above

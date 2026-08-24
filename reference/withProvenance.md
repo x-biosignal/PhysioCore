@@ -52,12 +52,12 @@ to <- PhysioExperiment(
 to <- withProvenance(from, to, "resample", params = list(to = 50))
 provenance(to)
 #>       step activity                              entity used generated
-#> 1   import   import   pe:import@2026-08-22T14:06:47.635 <NA>      <NA>
-#> 2 resample resample pe:resample@2026-08-22T14:06:47.646 <NA>      <NA>
+#> 1   import   import   pe:import@2026-08-24T15:30:57.637 <NA>      <NA>
+#> 2 resample resample pe:resample@2026-08-24T15:30:57.648 <NA>      <NA>
 #>                  agent   user package version       startedAtTime
-#> 1 runner@runnervm76f27 runner    <NA>    <NA> 2026-08-22 14:06:47
-#> 2 runner@runnervm76f27 runner    <NA>    <NA> 2026-08-22 14:06:47
+#> 1 runner@runnervm76f27 runner    <NA>    <NA> 2026-08-24 15:30:57
+#> 2 runner@runnervm76f27 runner    <NA>    <NA> 2026-08-24 15:30:57
 #>           endedAtTime           timestamp params params_json
-#> 1 2026-08-22 14:06:47 2026-08-22 14:06:47                 {}
-#> 2 2026-08-22 14:06:47 2026-08-22 14:06:47  to=50   {"to":50}
+#> 1 2026-08-24 15:30:57 2026-08-24 15:30:57                 {}
+#> 2 2026-08-24 15:30:57 2026-08-24 15:30:57  to=50   {"to":50}
 ```

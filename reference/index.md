@@ -102,6 +102,10 @@
   : Get channel names/labels
 - [`checkNA()`](https://x-biosignal.github.io/PhysioCore/reference/checkNA.md)
   : Check for NA values in assay data
+- [`circularLinearCorrelation()`](https://x-biosignal.github.io/PhysioCore/reference/circularLinearCorrelation.md)
+  : Mardia's circular-linear correlation
+- [`circularSummary()`](https://x-biosignal.github.io/PhysioCore/reference/circularSummary.md)
+  : Circular mean direction and spread
 - [`cohensD()`](https://x-biosignal.github.io/PhysioCore/reference/cohensD.md)
   : Cohen's d Effect Size
 - [`cohortData()`](https://x-biosignal.github.io/PhysioCore/reference/cohortData.md)
@@ -130,6 +134,8 @@
   : Create an EventQuery from a PhysioExperiment
 - [`extractWindow()`](https://x-biosignal.github.io/PhysioCore/reference/extractWindow.md)
   : Extract time window
+- [`fPCA()`](https://x-biosignal.github.io/PhysioCore/reference/fPCA.md)
+  : Functional Data Analysis (FDA) for Biomechanics
 - [`fillEdgeNA()`](https://x-biosignal.github.io/PhysioCore/reference/fillEdgeNA.md)
   : Fill NA values at edges
 - [`filterType()`](https://x-biosignal.github.io/PhysioCore/reference/filterType.md)
@@ -192,15 +198,23 @@
   : Colorblind-safe palettes (qualitative, sequential, diverging)
 - [`pickChannels()`](https://x-biosignal.github.io/PhysioCore/reference/pickChannels.md)
   : Pick specific channels
+- [`print(`*`<fpca_result>`*`)`](https://x-biosignal.github.io/PhysioCore/reference/print.fpca_result.md)
+  : Print fPCA result
 - [`provenance()`](https://x-biosignal.github.io/PhysioCore/reference/provenance.md)
   [`` `provenance<-`() ``](https://x-biosignal.github.io/PhysioCore/reference/provenance.md)
   : Provenance / audit trail for PhysioExperiment objects
 - [`provenanceHash()`](https://x-biosignal.github.io/PhysioCore/reference/provenanceHash.md)
   : Deterministic hash of the provenance audit trail
+- [`rayleighTest()`](https://x-biosignal.github.io/PhysioCore/reference/rayleighTest.md)
+  : Rayleigh test for a preferred direction
 - [`rbindPhysio()`](https://x-biosignal.github.io/PhysioCore/reference/rbindPhysio.md)
   : Combine PhysioExperiment objects by time
+- [`reconstructFPCA()`](https://x-biosignal.github.io/PhysioCore/reference/reconstructFPCA.md)
+  : Reconstruct waveforms from fPCA
 - [`recordActivity()`](https://x-biosignal.github.io/PhysioCore/reference/recordActivity.md)
   : Record a PROV activity around an operation
+- [`registerCurves()`](https://x-biosignal.github.io/PhysioCore/reference/registerCurves.md)
+  : Curve registration (time warping)
 - [`registerOperation()`](https://x-biosignal.github.io/PhysioCore/reference/registerOperation.md)
   [`getOperation()`](https://x-biosignal.github.io/PhysioCore/reference/registerOperation.md)
   [`availableOperations()`](https://x-biosignal.github.io/PhysioCore/reference/registerOperation.md)
@@ -291,6 +305,15 @@
   : Time index helper
 - [`timeToSamples()`](https://x-biosignal.github.io/PhysioCore/reference/timeToSamples.md)
   : Convert event times to sample indices
+- [`watsonWilliamsTest()`](https://x-biosignal.github.io/PhysioCore/reference/watsonWilliamsTest.md)
+  : Watson-Williams test for equal mean directions
+- [`waveformCMC()`](https://x-biosignal.github.io/PhysioCore/reference/waveformCMC.md)
+  : Coefficient of multiple correlation for repeated waveforms (Kadaba
+  CMC)
+- [`waveformICC()`](https://x-biosignal.github.io/PhysioCore/reference/waveformICC.md)
+  : Pointwise intraclass correlation across the movement cycle
+- [`waveformReliability()`](https://x-biosignal.github.io/PhysioCore/reference/waveformReliability.md)
+  : Waveform reliability report: CMC, ICC / SEM / MDC curves
 - [`withProvenance()`](https://x-biosignal.github.io/PhysioCore/reference/withProvenance.md)
   : Carry a provenance log onto a derived object and record a step
 - [`wpliEstimate()`](https://x-biosignal.github.io/PhysioCore/reference/wpliEstimate.md)

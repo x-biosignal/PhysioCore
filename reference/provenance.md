@@ -75,9 +75,9 @@ pe <- PhysioExperiment(
 pe <- logStep(pe, "filterSignals", params = list(low = 1, high = 40))
 provenance(pe)
 #>            step      activity                                   entity used
-#> 1 filterSignals filterSignals pe:filterSignals@2026-08-22T14:06:39.888 <NA>
+#> 1 filterSignals filterSignals pe:filterSignals@2026-08-24T15:30:47.784 <NA>
 #>   generated                agent   user package version       startedAtTime
-#> 1      <NA> runner@runnervm76f27 runner    <NA>    <NA> 2026-08-22 14:06:39
+#> 1      <NA> runner@runnervm76f27 runner    <NA>    <NA> 2026-08-24 15:30:47
 #>           endedAtTime           timestamp         params         params_json
-#> 1 2026-08-22 14:06:39 2026-08-22 14:06:39 low=1, high=40 {"low":1,"high":40}
+#> 1 2026-08-24 15:30:47 2026-08-24 15:30:47 low=1, high=40 {"low":1,"high":40}
 ```

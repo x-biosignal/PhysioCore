@@ -27,6 +27,8 @@ between time and sample representations.
 ``` r
 
 library(PhysioCore)
+#> Warning: replacing previous import 'S4Arrays::makeNindexFromArrayViewport' by
+#> 'DelayedArray::makeNindexFromArrayViewport' when loading 'SummarizedExperiment'
 
 # Create events with full specification
 events <- PhysioEvents(
@@ -393,7 +395,7 @@ sessionInfo()
 #> [1] stats     graphics  grDevices utils     datasets  methods   base     
 #> 
 #> other attached packages:
-#> [1] PhysioCore_0.3.0
+#> [1] PhysioCore_0.4.0
 #> 
 #> loaded via a namespace (and not attached):
 #>  [1] Matrix_1.7-5                jsonlite_2.0.0             

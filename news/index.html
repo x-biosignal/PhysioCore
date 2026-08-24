@@ -7,7 +7,7 @@
 
     <a class="navbar-brand me-2" href="../index.html">PhysioCore</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">0.3.0</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">0.4.0</small>
 
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -55,6 +55,14 @@
       <small>Source: <a href="https://github.com/x-biosignal/PhysioCore/blob/main/NEWS.md" class="external-link"><code>NEWS.md</code></a></small>
     </div>
 
+    <div class="section level2">
+<h2 class="pkg-version" data-toc-text="0.4.0" id="physiocore-040">PhysioCore 0.4.0<a class="anchor" aria-label="anchor" href="#physiocore-040"></a></h2>
+<p>Generic statistical methods relocated here as their single source of truth (previously in PhysioMoCap), so the whole ecosystem can share them and the statistics layer (PhysioAnalysis) can surface them:</p>
+<ul><li>Functional PCA: <code><a href="../reference/fPCA.html">fPCA()</a></code>, <code><a href="../reference/reconstructFPCA.html">reconstructFPCA()</a></code>, <code><a href="../reference/registerCurves.html">registerCurves()</a></code> (the ggplot2 visualiser <code>plotFPCA()</code> stays in PhysioMoCap).</li>
+<li>Waveform reliability: <code><a href="../reference/waveformCMC.html">waveformCMC()</a></code>, <code><a href="../reference/waveformICC.html">waveformICC()</a></code>, <code><a href="../reference/waveformReliability.html">waveformReliability()</a></code>.</li>
+<li>Circular statistics: <code><a href="../reference/circularSummary.html">circularSummary()</a></code>, <code><a href="../reference/rayleighTest.html">rayleighTest()</a></code>, <code><a href="../reference/watsonWilliamsTest.html">watsonWilliamsTest()</a></code>, <code><a href="../reference/circularLinearCorrelation.html">circularLinearCorrelation()</a></code>.</li>
+</ul><p>PhysioMoCap re-exports all of these for back-compatibility, so existing <code>PhysioMoCap::fPCA()</code> etc. calls are unchanged.</p>
+</div>
     <div class="section level2">
 <h2 class="pkg-version" data-toc-text="0.3.0" id="physiocore-030">PhysioCore 0.3.0<a class="anchor" aria-label="anchor" href="#physiocore-030"></a></h2>
 <ul><li>New <code>PhysioCohort</code> class: the multi-subject / study container above <code>PhysioLongitudinal</code>. It holds many participants (each a <code>PhysioLongitudinal</code> timeline; bare <code>PhysioExperiment</code>/<code>MultiRatePhysioExperiment</code> subjects are auto-wrapped into a single-session timeline) alongside a subject-level <code>colData</code> table (id, group/arm, diagnosis, …). This is the cohort / RCT-arm spine a rehabilitation study needs — previously the ecosystem could represent a single subject’s sessions but had no multi-subject container.

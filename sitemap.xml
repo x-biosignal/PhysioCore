@@ -53,6 +53,8 @@
 <url><loc>https://x-biosignal.github.io/PhysioCore/reference/channelNames-set.html</loc></url>
 <url><loc>https://x-biosignal.github.io/PhysioCore/reference/channelNames.html</loc></url>
 <url><loc>https://x-biosignal.github.io/PhysioCore/reference/checkNA.html</loc></url>
+<url><loc>https://x-biosignal.github.io/PhysioCore/reference/circularLinearCorrelation.html</loc></url>
+<url><loc>https://x-biosignal.github.io/PhysioCore/reference/circularSummary.html</loc></url>
 <url><loc>https://x-biosignal.github.io/PhysioCore/reference/cohensD.html</loc></url>
 <url><loc>https://x-biosignal.github.io/PhysioCore/reference/cohortData.html</loc></url>
 <url><loc>https://x-biosignal.github.io/PhysioCore/reference/cohortDesign.html</loc></url>
@@ -69,6 +71,7 @@
 <url><loc>https://x-biosignal.github.io/PhysioCore/reference/etaSquared.html</loc></url>
 <url><loc>https://x-biosignal.github.io/PhysioCore/reference/eventQuery.html</loc></url>
 <url><loc>https://x-biosignal.github.io/PhysioCore/reference/extractWindow.html</loc></url>
+<url><loc>https://x-biosignal.github.io/PhysioCore/reference/fPCA.html</loc></url>
 <url><loc>https://x-biosignal.github.io/PhysioCore/reference/fillEdgeNA.html</loc></url>
 <url><loc>https://x-biosignal.github.io/PhysioCore/reference/filterType.html</loc></url>
 <url><loc>https://x-biosignal.github.io/PhysioCore/reference/filterValue.html</loc></url>
@@ -103,10 +106,14 @@
 <url><loc>https://x-biosignal.github.io/PhysioCore/reference/physioBiomarker-constructor.html</loc></url>
 <url><loc>https://x-biosignal.github.io/PhysioCore/reference/physioPalette.html</loc></url>
 <url><loc>https://x-biosignal.github.io/PhysioCore/reference/pickChannels.html</loc></url>
+<url><loc>https://x-biosignal.github.io/PhysioCore/reference/print.fpca_result.html</loc></url>
 <url><loc>https://x-biosignal.github.io/PhysioCore/reference/provenance.html</loc></url>
 <url><loc>https://x-biosignal.github.io/PhysioCore/reference/provenanceHash.html</loc></url>
+<url><loc>https://x-biosignal.github.io/PhysioCore/reference/rayleighTest.html</loc></url>
 <url><loc>https://x-biosignal.github.io/PhysioCore/reference/rbindPhysio.html</loc></url>
+<url><loc>https://x-biosignal.github.io/PhysioCore/reference/reconstructFPCA.html</loc></url>
 <url><loc>https://x-biosignal.github.io/PhysioCore/reference/recordActivity.html</loc></url>
+<url><loc>https://x-biosignal.github.io/PhysioCore/reference/registerCurves.html</loc></url>
 <url><loc>https://x-biosignal.github.io/PhysioCore/reference/registerOperation.html</loc></url>
 <url><loc>https://x-biosignal.github.io/PhysioCore/reference/registerReader.html</loc></url>
 <url><loc>https://x-biosignal.github.io/PhysioCore/reference/registerWriter.html</loc></url>
@@ -143,6 +150,10 @@
 <url><loc>https://x-biosignal.github.io/PhysioCore/reference/theme_physio.html</loc></url>
 <url><loc>https://x-biosignal.github.io/PhysioCore/reference/timeIndex.html</loc></url>
 <url><loc>https://x-biosignal.github.io/PhysioCore/reference/timeToSamples.html</loc></url>
+<url><loc>https://x-biosignal.github.io/PhysioCore/reference/watsonWilliamsTest.html</loc></url>
+<url><loc>https://x-biosignal.github.io/PhysioCore/reference/waveformCMC.html</loc></url>
+<url><loc>https://x-biosignal.github.io/PhysioCore/reference/waveformICC.html</loc></url>
+<url><loc>https://x-biosignal.github.io/PhysioCore/reference/waveformReliability.html</loc></url>
 <url><loc>https://x-biosignal.github.io/PhysioCore/reference/withProvenance.html</loc></url>
 <url><loc>https://x-biosignal.github.io/PhysioCore/reference/wpliEstimate.html</loc></url>
 </urlset>
