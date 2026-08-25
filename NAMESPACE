@@ -1,0 +1,218 @@
+# Imports for shared generics
+importFrom(BiocGenerics, design)
+importFrom(BiocGenerics, "design<-")
+importFrom(digest, digest)
+
+# Classes
+exportClasses(PhysioExperiment, PhysioEvents)
+export(PhysioExperiment)
+export(PhysioEvents)
+
+# Multi-rate multimodal container
+exportClasses(MultiRatePhysioExperiment)
+export(MultiRatePhysioExperiment)
+export(streams)
+export(`streams<-`)
+export(streamNames)
+export(streamRates)
+export(commonClock)
+export(nStreams)
+export(streamTimeIndex)
+export(resampleToCommon)
+export(alignStreams)
+export(assaySamplingRates)
+export(setAssaySamplingRate)
+
+# Longitudinal subject/session container
+exportClasses(PhysioLongitudinal)
+export(PhysioLongitudinal)
+export(sessions)
+export(`sessions<-`)
+export(session)
+export(design)
+export(`design<-`)
+export(subjectData)
+export(`subjectData<-`)
+export(addSession)
+export(asMultiAssayExperiment)
+exportClasses(PhysioCohort)
+export(PhysioCohort)
+export(subjects)
+export(`subjects<-`)
+export(subject)
+export(cohortData)
+export(`cohortData<-`)
+export(subjectIds)
+export(nSubjects)
+export(groups)
+export(addSubject)
+export(subsetCohort)
+export(cohortDesign)
+
+# Cross-session harmonization
+export(harmonizeChannels)
+export(harmonizeReference)
+export(harmonizeMontage)
+export(harmonize)
+export(harmonizeReport)
+
+# Longitudinal change scores
+export(changeScores)
+export(asMSKTracker)
+
+# Analysis results
+exportClasses(AnalysisResult, PhysioBiomarker)
+export(AnalysisResult)
+export(PhysioBiomarker)
+export(physioBiomarker)
+export(is.PhysioBiomarker)
+export(resultType)
+export(resultValue)
+export(biomarkerValue)
+export(estimateOf)
+export(uncertaintyOf)
+export(provenanceOf)
+export(estimandOf)
+S3method(format, PhysioBiomarker)
+S3method(as.data.frame, PhysioBiomarker)
+
+# Normative reference values
+exportClasses(NormativeReference)
+export(NormativeReference)
+export(normativeLookup)
+export(zScore)
+export(percentPredicted)
+
+# Clinimetrics (single source of truth; re-exported by domain packages)
+export(icc)
+export(sem)
+export(mdc)
+export(cohensD)
+export(etaSquared)
+export(blandAltman)
+
+# Circular statistics (single source of truth; re-exported by domain packages)
+export(circularSummary)
+export(rayleighTest)
+export(watsonWilliamsTest)
+export(circularLinearCorrelation)
+S3method(print,circular_summary)
+
+# Waveform reliability (single source of truth; re-exported by domain packages)
+export(waveformCMC)
+export(waveformICC)
+export(waveformReliability)
+S3method(print,waveform_icc)
+S3method(print,waveform_reliability)
+
+# Functional data analysis / fPCA (viz plotFPCA stays in PhysioMoCap)
+export(fPCA)
+export(reconstructFPCA)
+export(registerCurves)
+S3method(print,fpca_result)
+
+# Visualization theme / palette
+export(physioPalette)
+export(theme_physio)
+export(scale_color_physio)
+export(scale_colour_physio)
+export(scale_fill_physio)
+
+# Provenance
+export(provenance)
+export(`provenance<-`)
+export(appendProvenance)
+export(logStep)
+export(addProvenance)
+export(withProvenance)
+export(provenanceHash)
+export(recordActivity)
+
+# Accessors
+export(samplingRate)
+export(`samplingRate<-`)
+export(defaultAssay)
+export(timeIndex)
+export(duration)
+
+# Signal / connectivity helpers
+export(wpliEstimate)
+
+# MVAR core (shared by PhysioEEG / PhysioCrossModal)
+export(.fitMVAR)
+export(mvarOrderSelect)
+export(.mvarSpectral)
+export(mvarFit)
+export(mvarTransfer)
+
+# Channel management
+export(channelInfo)
+export(`channelInfo<-`)
+export(channelNames)
+export(`channelNames<-`)
+export(nChannels)
+export(setChannelTypes)
+export(setChannelUnits)
+export(getChannelsByType)
+export(pickChannels)
+export(dropChannels)
+export(renameChannels)
+export(setReference)
+export(getReference)
+export(setElectrodePositions)
+export(getElectrodePositions)
+export(applyMontage)
+
+# Events
+export(getEvents)
+export(setEvents)
+export(addEvents)
+export(removeEvents)
+export(nEvents)
+export(timeToSamples)
+export(samplesToTime)
+
+# Event-query DSL
+exportClasses(EventQuery)
+export(eventQuery)
+export(filterType)
+export(filterValue)
+export(resolveQuery)
+
+# S4 methods
+exportMethods(show, length, dim, "[", "[[", summary, as.data.frame)
+export(cbindPhysio)
+export(rbindPhysio)
+export(extractWindow)
+
+# NA handling utilities
+export(checkNA)
+export(handleNA)
+export(fillEdgeNA)
+export(hasNA)
+export(naSummary)
+export(replaceNA)
+
+# Lifecycle / deprecation
+export(deprecate_physio)
+
+# Plugin / registration API
+export(registerReader)
+export(getReader)
+export(availableReaders)
+export(unregisterReader)
+export(registerWriter)
+export(getWriter)
+export(availableWriters)
+export(unregisterWriter)
+export(registerOperation)
+export(getOperation)
+export(availableOperations)
+export(unregisterOperation)
+
+# Imports
+import(methods)
+importFrom(S4Vectors, DataFrame, SimpleList, metadata, "metadata<-")
+importFrom(SummarizedExperiment, SummarizedExperiment, assay, "assay<-",
+           assayNames, assays, "assays<-", rowData, "rowData<-", colData)
+importFrom(stats, approx, sd, median)

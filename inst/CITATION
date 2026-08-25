@@ -1,0 +1,12 @@
+citHeader("To cite PhysioCore in publications use:")
+
+bibentry(
+  bibtype  = "Manual",
+  title    = "PhysioCore: Core Data Structures for Physiological Signal Analysis",
+  author   = person("Yusuke", "Matsui"),
+  year     = "2026",
+  note     = paste("R package version", meta$Version),
+  url      = "https://github.com/x-biosignal/PhysioCore"
+  # doi    = "10.5281/zenodo.XXXXXXX"  # add once minted
+)
+

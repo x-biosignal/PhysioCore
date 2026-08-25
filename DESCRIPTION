@@ -1,0 +1,72 @@
+Package: PhysioCore
+Title: Core Data Structures for Physiological Signal Analysis
+Version: 0.4.0
+Authors@R:
+    person(given = "Yusuke",
+           family = "Matsui",
+           role = c("aut", "cre"),
+           email = "mail.to.matsui@gmail.com")
+Description: Provides the PhysioExperiment class, a 'SummarizedExperiment'
+    extension for multi-modal physiological signal data (such as
+    electroencephalography, electromyography, and electrocardiography).
+    Includes core accessors, channel and event management, and basic 'S4'
+    methods. Designed as a lightweight foundation for the Physio ecosystem
+    of analysis packages.
+biocViews: Software, Infrastructure, DataRepresentation, TimeCourse
+Depends:
+    R (>= 4.2)
+Imports:
+    methods,
+    SummarizedExperiment,
+    S4Vectors,
+    stats,
+    lifecycle,
+    BiocGenerics,
+    digest
+Suggests:
+    testthat (>= 3.2.0),
+    abind,
+    ggplot2,
+    farver,
+    colorspace,
+    withr,
+    knitr,
+    rmarkdown,
+    BiocStyle,
+    MultiAssayExperiment,
+    PhysioMSKNet
+VignetteBuilder: knitr
+License: MIT + file LICENSE
+Encoding: UTF-8
+Roxygen: list(markdown = TRUE)
+Collate:
+    'PhysioExperiment-class.R'
+    'PhysioExperiment-accessors.R'
+    'PhysioExperiment-methods.R'
+    'provenance.R'
+    'MultiRatePhysioExperiment-class.R'
+    'multirate-accessors.R'
+    'PhysioLongitudinal-class.R'
+    'PhysioCohort-class.R'
+    'channels.R'
+    'harmonize.R'
+    'change-scores.R'
+    'events.R'
+    'event-query.R'
+    'utils-signal.R'
+    'utils-mvar.R'
+    'utils-na.R'
+    'clinimetrics.R'
+    'analysis-result.R'
+    'normative.R'
+    'biomarker.R'
+    'vis-theme.R'
+    'registry.R'
+    'lifecycle.R'
+    'stats-circular.R'
+    'stats-reliability.R'
+    'stats-fda.R'
+    'zzz.R'
+RoxygenNote: 7.3.3
+URL: https://github.com/x-biosignal/PhysioCore, https://x-biosignal.r-universe.dev/PhysioCore, https://x-biosignal.github.io/PhysioCore/
+BugReports: https://github.com/x-biosignal/PhysioCore/issues
