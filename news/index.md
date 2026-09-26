@@ -1,5 +1,44 @@
 # Changelog
 
+## PhysioCore 0.5.0
+
+### New Features
+
+- [`aggregatePhysioFeatures()`](https://x-biosignal.github.io/PhysioCore/reference/aggregatePhysioFeatures.md)
+  summarizes keyed scalar features through trials, sessions, subjects
+  and cohorts. Default means weight immediate children equally at each
+  level, so a subject contributing more trials does not dominate the
+  group mean – on a deliberately unbalanced example the staged mean is
+  17.5 where pooling every observation at once gives 14. Explicit strata
+  (side, condition, channel), missing-value counts, the intermediate
+  per-level summaries and links back to the original observations
+  accompany the output.
+
+- Subsetting a `PhysioExperiment` with `[` now **records the operation
+  in the object’s provenance**: an activity `"subset"` carrying the
+  supplied row and column indices, which axes were left unspecified,
+  `drop`, and the input and output dimensions. Subsetting was previously
+  the one structural operation that left no trace, so a derived object
+  could not be related back to its parent.
+
+### Bug Fixes
+
+- A zero-row (or zero-column) selection now **retains the annotation
+  columns** of the dropped axis, instead of returning a
+  `rowData`/`colData` stripped of its columns. Empty selections
+  therefore keep the same schema as non-empty ones.
+
+- The provenance JSON serializer escaped only double quotes. Control
+  characters (tab, newline, and anything below U+0020) were emitted raw,
+  producing invalid JSON, and a missing character value was written as
+  the string `"NA"`. Control characters are now escaped as `\uXXXX`,
+  backslashes are escaped, and `NA` is written as `null`.
+
+- Numeric provenance parameters were serialized with R’s default seven
+  significant digits, so a recorded value did not round-trip:
+  0.1234567890123 came back as 0.1234568. They are now written with 17
+  significant digits, which is lossless for a double.
+
 ## PhysioCore 0.4.0
 
 Generic statistical methods relocated here as their single source of

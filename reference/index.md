@@ -70,6 +70,8 @@
   : Add a session to a PhysioLongitudinal
 - [`addSubject()`](https://x-biosignal.github.io/PhysioCore/reference/addSubject.md)
   : Add a subject to a PhysioCohort
+- [`aggregatePhysioFeatures()`](https://x-biosignal.github.io/PhysioCore/reference/aggregatePhysioFeatures.md)
+  : Aggregate features through trial, session, subject and cohort levels
 - [`alignStreams()`](https://x-biosignal.github.io/PhysioCore/reference/alignStreams.md)
   : Align all streams to the reference rate
 - [`appendProvenance()`](https://x-biosignal.github.io/PhysioCore/reference/appendProvenance.md)

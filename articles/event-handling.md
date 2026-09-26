@@ -27,8 +27,6 @@ between time and sample representations.
 ``` r
 
 library(PhysioCore)
-#> Warning: replacing previous import 'S4Arrays::makeNindexFromArrayViewport' by
-#> 'DelayedArray::makeNindexFromArrayViewport' when loading 'SummarizedExperiment'
 
 # Create events with full specification
 events <- PhysioEvents(
@@ -376,7 +374,7 @@ epoching and ERP computation in downstream packages.
 sessionInfo()
 #> R version 4.6.1 (2026-06-24)
 #> Platform: x86_64-pc-linux-gnu
-#> Running under: Ubuntu 24.04.4 LTS
+#> Running under: Ubuntu 24.04.5 LTS
 #> 
 #> Matrix products: default
 #> BLAS:   /usr/lib/x86_64-linux-gnu/openblas-pthread/libblas.so.3 
@@ -395,7 +393,7 @@ sessionInfo()
 #> [1] stats     graphics  grDevices utils     datasets  methods   base     
 #> 
 #> other attached packages:
-#> [1] PhysioCore_0.4.0
+#> [1] PhysioCore_0.5.0
 #> 
 #> loaded via a namespace (and not attached):
 #>  [1] Matrix_1.7-5                jsonlite_2.0.0             
@@ -407,18 +405,18 @@ sessionInfo()
 #> [13] fastmap_1.2.0               lattice_0.22-9             
 #> [15] XVector_0.52.0              R6_2.6.1                   
 #> [17] S4Arrays_1.12.0             generics_0.1.4             
-#> [19] MultiAssayExperiment_1.38.0 knitr_1.51                 
+#> [19] MultiAssayExperiment_1.38.0 knitr_1.52                 
 #> [21] BiocGenerics_0.58.1         DelayedArray_0.38.2        
 #> [23] desc_1.4.3                  MatrixGenerics_1.24.0      
 #> [25] bslib_0.12.0                rlang_1.3.0                
-#> [27] cachem_1.1.0                xfun_0.60                  
+#> [27] cachem_1.1.0                xfun_0.61                  
 #> [29] fs_2.1.0                    sass_0.4.10                
 #> [31] otel_0.2.0                  SparseArray_1.12.2         
 #> [33] cli_3.6.6                   pkgdown_2.2.1              
 #> [35] digest_0.6.39               grid_4.6.1                 
-#> [37] lifecycle_1.0.5             S4Vectors_0.50.1           
+#> [37] lifecycle_1.0.5             S4Vectors_0.50.3           
 #> [39] evaluate_1.0.5              ragg_1.5.2                 
 #> [41] abind_1.4-8                 stats4_4.6.1               
-#> [43] rmarkdown_2.31              matrixStats_1.5.0          
+#> [43] rmarkdown_2.32              matrixStats_1.5.0          
 #> [45] tools_4.6.1                 htmltools_0.5.9
 ```

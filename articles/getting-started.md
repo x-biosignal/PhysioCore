@@ -21,8 +21,6 @@ channel metadata via `colData`, and a sampling rate in Hz.
 ``` r
 
 library(PhysioCore)
-#> Warning: replacing previous import 'S4Arrays::makeNindexFromArrayViewport' by
-#> 'DelayedArray::makeNindexFromArrayViewport' when loading 'SummarizedExperiment'
 
 # Simulate 4 seconds of 4-channel EEG data at 250 Hz
 n_time <- 1000
@@ -308,7 +306,7 @@ fillEdgeNA(y, method = "extend")
 sessionInfo()
 #> R version 4.6.1 (2026-06-24)
 #> Platform: x86_64-pc-linux-gnu
-#> Running under: Ubuntu 24.04.4 LTS
+#> Running under: Ubuntu 24.04.5 LTS
 #> 
 #> Matrix products: default
 #> BLAS:   /usr/lib/x86_64-linux-gnu/openblas-pthread/libblas.so.3 
@@ -327,7 +325,7 @@ sessionInfo()
 #> [1] stats     graphics  grDevices utils     datasets  methods   base     
 #> 
 #> other attached packages:
-#> [1] PhysioCore_0.4.0 BiocStyle_2.40.0
+#> [1] PhysioCore_0.5.0 BiocStyle_2.40.0
 #> 
 #> loaded via a namespace (and not attached):
 #>  [1] Matrix_1.7-5                jsonlite_2.0.0             
@@ -340,18 +338,18 @@ sessionInfo()
 #> [15] lattice_0.22-9              XVector_0.52.0             
 #> [17] R6_2.6.1                    S4Arrays_1.12.0            
 #> [19] generics_0.1.4              MultiAssayExperiment_1.38.0
-#> [21] knitr_1.51                  BiocGenerics_0.58.1        
-#> [23] DelayedArray_0.38.2         bookdown_0.47              
+#> [21] knitr_1.52                  BiocGenerics_0.58.1        
+#> [23] DelayedArray_0.38.2         bookdown_0.48              
 #> [25] desc_1.4.3                  MatrixGenerics_1.24.0      
 #> [27] bslib_0.12.0                rlang_1.3.0                
-#> [29] cachem_1.1.0                xfun_0.60                  
+#> [29] cachem_1.1.0                xfun_0.61                  
 #> [31] fs_2.1.0                    sass_0.4.10                
 #> [33] otel_0.2.0                  SparseArray_1.12.2         
 #> [35] cli_3.6.6                   pkgdown_2.2.1              
 #> [37] grid_4.6.1                  digest_0.6.39              
-#> [39] lifecycle_1.0.5             S4Vectors_0.50.1           
+#> [39] lifecycle_1.0.5             S4Vectors_0.50.3           
 #> [41] evaluate_1.0.5              ragg_1.5.2                 
 #> [43] abind_1.4-8                 stats4_4.6.1               
-#> [45] rmarkdown_2.31              matrixStats_1.5.0          
+#> [45] rmarkdown_2.32              matrixStats_1.5.0          
 #> [47] tools_4.6.1                 htmltools_0.5.9
 ```

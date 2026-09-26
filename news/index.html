@@ -7,7 +7,7 @@
 
     <a class="navbar-brand me-2" href="../index.html">PhysioCore</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">0.4.0</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">0.5.0</small>
 
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -55,6 +55,20 @@
       <small>Source: <a href="https://github.com/x-biosignal/PhysioCore/blob/main/NEWS.md" class="external-link"><code>NEWS.md</code></a></small>
     </div>
 
+    <div class="section level2">
+<h2 class="pkg-version" data-toc-text="0.5.0" id="physiocore-050">PhysioCore 0.5.0<a class="anchor" aria-label="anchor" href="#physiocore-050"></a></h2>
+<div class="section level3">
+<h3 id="new-features-0-5-0">New Features<a class="anchor" aria-label="anchor" href="#new-features-0-5-0"></a></h3>
+<ul><li><p><code><a href="../reference/aggregatePhysioFeatures.html">aggregatePhysioFeatures()</a></code> summarizes keyed scalar features through trials, sessions, subjects and cohorts. Default means weight immediate children equally at each level, so a subject contributing more trials does not dominate the group mean – on a deliberately unbalanced example the staged mean is 17.5 where pooling every observation at once gives 14. Explicit strata (side, condition, channel), missing-value counts, the intermediate per-level summaries and links back to the original observations accompany the output.</p></li>
+<li><p>Subsetting a <code>PhysioExperiment</code> with <code>[</code> now <strong>records the operation in the object’s provenance</strong>: an activity <code>"subset"</code> carrying the supplied row and column indices, which axes were left unspecified, <code>drop</code>, and the input and output dimensions. Subsetting was previously the one structural operation that left no trace, so a derived object could not be related back to its parent.</p></li>
+</ul></div>
+<div class="section level3">
+<h3 id="bug-fixes-0-5-0">Bug Fixes<a class="anchor" aria-label="anchor" href="#bug-fixes-0-5-0"></a></h3>
+<ul><li><p>A zero-row (or zero-column) selection now <strong>retains the annotation columns</strong> of the dropped axis, instead of returning a <code>rowData</code>/<code>colData</code> stripped of its columns. Empty selections therefore keep the same schema as non-empty ones.</p></li>
+<li><p>The provenance JSON serializer escaped only double quotes. Control characters (tab, newline, and anything below U+0020) were emitted raw, producing invalid JSON, and a missing character value was written as the string <code>"NA"</code>. Control characters are now escaped as <code>\uXXXX</code>, backslashes are escaped, and <code>NA</code> is written as <code>null</code>.</p></li>
+<li><p>Numeric provenance parameters were serialized with R’s default seven significant digits, so a recorded value did not round-trip: 0.1234567890123 came back as 0.1234568. They are now written with 17 significant digits, which is lossless for a double.</p></li>
+</ul></div>
+</div>
     <div class="section level2">
 <h2 class="pkg-version" data-toc-text="0.4.0" id="physiocore-040">PhysioCore 0.4.0<a class="anchor" aria-label="anchor" href="#physiocore-040"></a></h2>
 <p>Generic statistical methods relocated here as their single source of truth (previously in PhysioMoCap), so the whole ecosystem can share them and the statistics layer (PhysioAnalysis) can surface them:</p>

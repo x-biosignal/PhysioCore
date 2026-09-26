@@ -1,7 +1,9 @@
 # Subset PhysioExperiment by time indices
 
 Extracts a subset of the `PhysioExperiment` by row (time) and/or column
-(channel) indices, preserving all metadata.
+(channel) indices, preserving metadata and appending a
+processing-history entry with the supplied indices and input/output
+dimensions. Missing indices select the full corresponding axis.
 
 ## Usage
 
