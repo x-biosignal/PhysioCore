@@ -1,0 +1,121 @@
+---
+title: "PhysioCore: using the data model through the compatibility layer"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{PhysioCore: using the data model through the compatibility layer}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(collapse = TRUE, comment = "#>")
+```
+
+## What this package is
+
+`PhysioCore` is a **compatibility package**. The shared data model it used to
+implement -- the `PhysioExperiment` S4 class and the containers for multiple
+streams, repeated sessions and cohorts -- now lives in the
+[PhysioExperiment](https://github.com/x-biosignal/PhysioExperiment) package.
+`PhysioCore` re-exports that public interface unchanged, so that existing code
+written against it keeps working, including `S4` objects that were saved while
+the classes were defined here.
+
+Everything shown below therefore works identically whether you attach
+`PhysioCore` (as here) or `PhysioExperiment`. **New code should depend on
+`PhysioExperiment` directly;** this vignette exists so that users of the older
+package name can see the core workflow in one place.
+
+```{r attach}
+library(PhysioCore)
+```
+
+## Build a PhysioExperiment
+
+A `PhysioExperiment` holds one or more assays shaped as time x channels, plus a
+sampling rate. We create a small synthetic three-channel recording -- no files,
+no downloads.
+
+```{r construct}
+set.seed(1)
+sig <- matrix(rnorm(500 * 3), nrow = 500, ncol = 3)   # 500 samples, 3 channels
+pe <- PhysioExperiment(assays = list(raw = sig), samplingRate = 250)
+pe
+```
+
+## Core accessors
+
+The fundamental properties are reached through accessor functions rather than
+slots:
+
+```{r accessors}
+samplingRate(pe)   # Hz
+nChannels(pe)      # number of channels
+duration(pe)       # seconds
+head(timeIndex(pe)) # time vector for the samples
+channelNames(pe)    # auto-generated names, until you set your own
+```
+
+Channels are named `Ch1`, `Ch2`, ... by default. Rename them with the
+replacement form of `channelNames()`:
+
+```{r rename}
+channelNames(pe) <- c("Fz", "Cz", "Pz")
+channelNames(pe)
+```
+
+## Channel management
+
+Select or drop channels by name; the returned object is a `PhysioExperiment`:
+
+```{r channels}
+front <- pickChannels(pe, c("Fz", "Cz"))
+channelNames(front)
+
+no_pz <- dropChannels(pe, "Pz")
+channelNames(no_pz)
+```
+
+## Events
+
+Experimental markers (stimuli, responses, ...) are attached with `addEvents()`
+and read back with `getEvents()`:
+
+```{r events}
+pe <- addEvents(pe, onset = c(0.5, 1.2, 1.9), duration = 0.1, type = "stimulus")
+nEvents(pe)
+getEvents(pe)
+```
+
+## Extract a time window
+
+`extractWindow()` cuts a segment by time in seconds:
+
+```{r window}
+seg <- extractWindow(pe, tmin = 0, tmax = 0.5)
+dim(seg)
+```
+
+## Summarize and check for gaps
+
+```{r summary}
+summary(pe)
+naSummary(pe)
+```
+
+## Where to go next
+
+`PhysioCore` adds nothing beyond this re-exported surface. For the full data
+model -- including the multi-stream, longitudinal and cohort containers -- and
+for signal I/O, preprocessing and analysis, see the dedicated packages:
+
+| Package | Purpose |
+|---------|---------|
+| `PhysioExperiment` | the data model (depend on this in new code) |
+| `PhysioIO` | reading/writing files and databases |
+| `PhysioPreprocess` | filtering, referencing, resampling, ICA |
+| `PhysioAnalysis` | spectral/time-frequency analysis, statistics, plots |
+
+```{r session, echo = FALSE}
+sessionInfo()
+```

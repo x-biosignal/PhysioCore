@@ -1,0 +1,33 @@
+Package: PhysioCore
+Title: Compatibility Layer for the PhysioExperiment Data Model
+Version: 1.0.1
+Authors@R:
+    person(given = "Yusuke",
+           family = "Matsui",
+           role = c("aut", "cre"),
+           email = "mail.to.matsui@gmail.com")
+Description: Compatibility package. The shared data model that used to live
+    here -- the PhysioExperiment class and the containers for multiple streams,
+    repeated sessions and cohorts -- now lives in the 'PhysioExperiment'
+    package. This package re-exports that public interface unchanged, so
+    existing code written against 'PhysioCore' keeps working, including
+    'S4' objects saved while the classes were defined here. New code should
+    depend on 'PhysioExperiment' directly.
+biocViews: Software, Infrastructure, DataRepresentation, TimeCourse
+Depends:
+    R (>= 4.2),
+    PhysioExperiment (>= 2.0.0)
+Imports:
+    methods
+Suggests:
+    testthat (>= 3.2.0),
+    withr,
+    knitr,
+    rmarkdown
+License: MIT + file LICENSE
+Encoding: UTF-8
+VignetteBuilder: knitr
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.3.3
+URL: https://github.com/x-biosignal/PhysioCore, https://x-biosignal.r-universe.dev/PhysioCore, https://x-biosignal.github.io/PhysioCore/
+BugReports: https://github.com/x-biosignal/PhysioCore/issues
